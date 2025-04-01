@@ -1,1 +1,10 @@
-﻿
+﻿Console.Write("who are you :3\n$ ");
+var name = Console.ReadLine();
+string str = $"someone \e[32mmeows\e[39m at {name}";
+Console.WriteLine(str);
+name = (name.Contains(" ")) ? name.Substring(0, name.IndexOf(" ")) : name;
+Thread.Sleep(1000);
+Console.Write($"so, {name}, how's life\n$ ");
+Console.ReadLine();
+Thread.Sleep(1000);
+Console.WriteLine("actually, don't answer that.");
