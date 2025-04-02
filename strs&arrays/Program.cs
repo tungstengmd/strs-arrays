@@ -1,10 +1,15 @@
 ﻿Console.Write("who are you :3\n$ ");
 var name = Console.ReadLine();
+name = name.Trim();
+string name2 = (name.Contains(" ")) ? name.Substring(name.IndexOf(" ")) : "";
+string temp = (name.Contains(" ")) ? name.Substring(1, name.IndexOf(" ")-1) : name.Substring(1);
+name = $"{char.ToUpper(name[0])}{temp.ToLower()}";
+temp = name2.Substring(2);
+name = $"{name} {char.ToUpper(name2[1])}{temp.ToLower()}";
 string str = $"someone \e[32mmeows\e[39m at {name}";
 Console.WriteLine(str);
 name = (name.Contains(" ")) ? name.Substring(0, name.IndexOf(" ")) : name;
 Thread.Sleep(1000);
 Console.Write($"so, {name}, how's life\n$ ");
-Console.ReadLine();
-Thread.Sleep(1000);
-Console.WriteLine("actually, don't answer that.");
+Thread.Sleep(2000);
+Console.WriteLine("\nactually, don't answer that.");
